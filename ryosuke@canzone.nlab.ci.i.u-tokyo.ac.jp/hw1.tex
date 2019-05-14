@@ -1,0 +1,56 @@
+\documentclass{article}
+\begin{document}
+\begin{center}
+\section*{先端データ解析論　レポート第1回}
+48196635 桑原亮介
+\end{center}
+\section{chapter1}
+\subsection{宿題1}
+\subsubsection{p(X=好，Y=眠)を求めよ．}
+$P(X=$好$)=0.8$, $P(Y=$眠 $\mid$ $X=$好$)=0.25$より,\\
+$P(Y=$眠 , $X=$好)=$P$(X=好)・$P(Y=$眠 $\mid$ $X=$好)$=0.2$（答）\\
+\subsubsection{ p(Y=眠)を求めよ}
+$P(Y=$眠)$=P(Y=$眠 $\mid$ $X=$好)$+P(Y=$眠 $\mid$ $X=$嫌) $=0.5$（答）\\
+\subsubsection{ P(X=好｜Y=眠) を求めよ．}
+P(X=好｜Y=眠)=$\frac{P(Y=\mbox{眠}\mid X=\mbox{好})P(X=\mbox{好})}{P(Y=\mbox{眠})}$ = $\frac{0.2}{0.5}$=0.4（答）
+\subsubsection{ 確率と統計の好き嫌いと 授業中眠たい事は独立か？}
+独立ではない。\\
+P(Y=眠)・P(X=好) $\neq$ P(Y=眠 , X=好)（答）
+
+\subsection{宿題2}
+証明\\
+\subsubsection{定数は期待値をとっても値は変わらない：\[E(c)=c\]}
+E(c)=cE(1)=c （答）
+\subsubsection{定数を足した期待値は，期待値に定数を足した
+ものと等しい：\[E(X+c)=E(X)+c\]}
+$E(X+c)=E(X)+E(c)\\
+\quad \quad \quad \quad=E(X)+c$ （答）
+\subsubsection{定数倍の期待値は，期待値の定数倍と等しい：\[E(cX)=cE(X)\]}
+$E(cX)=E(c)E(X)\\
+\quad \quad \quad=cE(X) $（答）
+
+\subsection{宿題3}
+\subsubsection{定数の分散はゼロ\[V(c)=0\]}
+分散の定義より、Xが確率変数に場合には$V(X)=E(X-\mu_{X})^{2}$,\\
+ここでcは定数なので、$E(c-c)^{2}=0$ (答)
+\subsubsection{定数を足したものの分散は，もとの分散と等しい\[V(X+c)=V(X)\]}
+V(X+c)=V(X)+V(c)= V(X) （答）
+\subsubsection{定数倍の分散は，もとの分散に定数の２乗をかけたものと等しい\[V(cX)=c^{2}V(X)\]}
+=$E(cX-c\mu_{Y})^{2}$\\
+=$E(c^{2}(X-\mu_{Y})^{2})$\\
+=$c^{2}E(X-\mu_{Y})^{2}$\\
+=$c^{2}V(X)$（答）
+\subsection{宿題4}
+\subsubsection{二つの確率変数 と の和の期待値は，それぞれ
+の期待値の和と等しい：\[\]}
+$E(X+X^{'})=\\
+\sum_{x}\sum_{x^{'}}(x+x^{'})P(X=x,X^{'}=x^{'})\\
+=\sum_{x}\sum_{x^{'}}xP(X=x,X^{'}=x^{'})+\sum_{x}\sum_{x^{'}}x^{'}P(X=x,X^{'}=x^{'})\\
+=\sum_{x}x\sum_{x^{'}}P(X=x,X^{'}=x^{'})+\sum_{x}x^{'}\sum_{x^{'}}P(X=x,X^{'}=x^{'})\\
+=\sum_{x}xP(X=x)+\sum_{x^{'}}x^{'}P(X^{'}=x^{'})\\$
+=$E(X)+E(X^{'})$（答）
+\subsubsection{しかし と の和の分散は，一般にはそれぞれの分散の和とは等しくない\[\]}
+$V(X+X^{'})=E((X+X^{'})-(\mu_{X}+\mu_{X^{'}}))^{2}\\
+=E((X-\mu_{X})^{2}+(X^{'}-\mu_{X^{'}})^{2}))+2E(X-\mu_{X})(X^{'}-\mu_{X^{'}})\\
+=V(X)+V(X^{'})+2Cov(X,X^{'})$（答）\\
+\end{document}
